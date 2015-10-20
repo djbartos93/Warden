@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @patron.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @patron.last_name %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @patron.status %>
+</p>
+
+<p>
+  <strong>Facility code:</strong>
+  <%= @patron.facility_code %>
+</p>
+
+<p>
+  <strong>Card code:</strong>
+  <%= @patron.card_code %>
+</p>
+
+<p>
+  <strong>Last access:</strong>
+  <%= @patron.last_access %>
+</p>
+
+<p>
+  <strong>Last locatoin:</strong>
+  <%= @patron.last_locatoin %>
+</p>
+
+<%= link_to 'Edit', edit_patron_path(@patron) %> |
+<%= link_to 'Back', patrons_path %>

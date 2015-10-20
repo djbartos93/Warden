@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Patrons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Status</th>
+      <th>Facility code</th>
+      <th>Card code</th>
+      <th>Last access</th>
+      <th>Last locatoin</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @patrons.each do |patron| %>
+      <tr>
+        <td><%= patron.first_name %></td>
+        <td><%= patron.last_name %></td>
+        <td><%= patron.status %></td>
+        <td><%= patron.facility_code %></td>
+        <td><%= patron.card_code %></td>
+        <td><%= patron.last_access %></td>
+        <td><%= patron.last_locatoin %></td>
+        <td><%= link_to 'Show', patron %></td>
+        <td><%= link_to 'Edit', edit_patron_path(patron) %></td>
+        <td><%= link_to 'Destroy', patron, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Patron', new_patron_path %>
